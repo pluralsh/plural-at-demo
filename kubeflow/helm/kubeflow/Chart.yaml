@@ -1,0 +1,48 @@
+apiVersion: v2
+name: kubeflow
+description: A helm chart for kubeflow
+version: 0.1.0
+appVersion: 0.1.12
+dependencies:
+- name: mysql-cluster
+  version: 0.1.12
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: katib
+  version: 0.1.15
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: notebooks
+  version: 0.1.7
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: pytorch
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: tensorflow
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: xgboost
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: profile-controller
+  version: 0.1.27
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: serving
+  version: 0.1.20
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: tensorboards
+  version: 0.1.5
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: volumes
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: mpi
+  version: 0.1.6
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: mxnet
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: pipelines
+  version: 0.1.81
+  repository: cm://app.plural.sh/cm/kubeflow
+- name: central-dashboard
+  version: 0.1.21
+  repository: cm://app.plural.sh/cm/kubeflow

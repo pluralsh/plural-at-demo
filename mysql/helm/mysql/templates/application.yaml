@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: mysql
+    version: 0.1.11
+    description: open source rdbms
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/e3a59d39-0917-4072-9c95-6cbcaab2381a/mysql.png?v=63800745996
+    

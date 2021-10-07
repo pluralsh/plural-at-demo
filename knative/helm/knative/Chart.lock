@@ -1,0 +1,6 @@
+dependencies:
+- name: knative-serving
+  repository: cm://app.plural.sh/cm/knative
+  version: 0.1.17
+digest: sha256:217d3f12357208a6217f6b2ed462abc4bccba6afcf45b8057d68cea7778da9bb
+generated: "2021-10-07T16:17:39.353920299+02:00"

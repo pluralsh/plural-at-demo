@@ -1,0 +1,9 @@
+apiVersion: v2
+name: grafana-tempo
+description: A helm chart for grafana-tempo
+version: 0.1.0
+appVersion: 0.1.9
+dependencies:
+- name: grafana-tempo
+  version: 0.1.9
+  repository: cm://app.plural.sh/cm/grafana-tempo

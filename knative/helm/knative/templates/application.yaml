@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: knative
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: knative
+    version: 0.1.17
+    description: serverless for kubernetes
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/405d5d69-0ed7-4995-9685-b2063fba845a/knative.png?v=63800137238
+    

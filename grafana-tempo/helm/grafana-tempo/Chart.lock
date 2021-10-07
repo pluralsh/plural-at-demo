@@ -1,0 +1,6 @@
+dependencies:
+- name: grafana-tempo
+  repository: cm://app.plural.sh/cm/grafana-tempo
+  version: 0.1.9
+digest: sha256:c6ec55b9b6e94167df7e95019f7b1d0c62eea873f41643e121672060538d3fe7
+generated: "2021-10-07T16:18:38.018432527+02:00"

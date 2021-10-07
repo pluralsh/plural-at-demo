@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: istio
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: istio
+    version: 0.1.86
+    description: envoy powered service mesh
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/fa9a3b19-539d-4307-b57d-3979a3f2b8ec/istio.png?v=63800041742
+    

@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: grafana-tempo
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: grafana-tempo
+    version: 0.1.9
+    description: easy-to-use and high-scale distributed tracing backend
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/aa94309f-00de-4b1b-becb-9dd93ff0853d/tempo.png?v=63800302637
+    

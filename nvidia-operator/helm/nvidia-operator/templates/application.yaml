@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: nvidia-operator
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: nvidia-operator
+    version: 0.1.2
+    description: Everything needed to schedule and monitor NVIDIA GPUs
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/841eb2e5-f792-4157-9ff0-7c8df1322a77/nvidia-logo-640x640.png?v=63796618921
+    

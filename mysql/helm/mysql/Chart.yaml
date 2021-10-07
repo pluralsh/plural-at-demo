@@ -1,0 +1,9 @@
+apiVersion: v2
+name: mysql
+description: A helm chart for mysql
+version: 0.1.0
+appVersion: 0.1.11
+dependencies:
+- name: mysql
+  version: 0.1.11
+  repository: cm://app.plural.sh/cm/mysql

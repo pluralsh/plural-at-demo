@@ -1,0 +1,9 @@
+apiVersion: v2
+name: redis
+description: A helm chart for redis
+version: 0.1.0
+appVersion: 0.1.7
+dependencies:
+- name: redis
+  version: 0.1.7
+  repository: cm://app.plural.sh/cm/redis

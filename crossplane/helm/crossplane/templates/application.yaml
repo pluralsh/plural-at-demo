@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: crossplane
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: crossplane
+    version: 0.1.4
+    description: crd based cloud resource deployment
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/568528e6-371b-4c20-8893-bcfe107aa120/crossplane-removebg-preview.png?v=63793664154
+    
