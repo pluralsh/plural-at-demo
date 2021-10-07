@@ -1,0 +1,29 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: ingress-nginx
+spec:
+  selector:
+    matchLabels: {}
+  componentKinds:
+  - group: v1
+    kind: Service
+  - group: networking.k8s.io
+    kind: Ingress
+  - group: cert-manager.io
+    kind: Certificate
+  - group: apps
+    kind: StatefulSet
+  - group: apps
+    kind: Deployment
+  - group: batch
+    kind: CronJob
+  - group: batch
+    kind: Job
+  descriptor:
+    type: ingress-nginx
+    version: 0.1.4
+    description: NGINX Ingress Controller for Kubernetes
+    icons:
+    - src: https://plural-assets.s3.us-east-2.amazonaws.com/uploads/repos/b00f924d-a832-4a73-84ba-40fd9f5f2cf8/nginx.png?v=63800583378
+    

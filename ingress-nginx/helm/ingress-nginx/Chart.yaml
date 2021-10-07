@@ -1,0 +1,9 @@
+apiVersion: v2
+name: ingress-nginx
+description: A helm chart for ingress-nginx
+version: 0.1.0
+appVersion: 0.1.4
+dependencies:
+- name: ingress-nginx
+  version: 0.1.4
+  repository: cm://app.plural.sh/cm/ingress-nginx
