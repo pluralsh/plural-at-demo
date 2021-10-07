@@ -8,7 +8,7 @@ step "terraform-init" {
   target  = "kubecost/terraform"
   command = "terraform"
   args    = ["init"]
-  sha     = ""
+  sha     = "h1:vdm4/P6ioneDEJr9EAaoVjAfI4oWZGmiFxiML3TO+lQ="
   retries = 0
 }
 
@@ -23,7 +23,7 @@ step "terraform" {
     "kubecost",
   ]
 
-  sha     = ""
+  sha     = "h1:vdm4/P6ioneDEJr9EAaoVjAfI4oWZGmiFxiML3TO+lQ="
   retries = 0
 }
 
@@ -38,7 +38,7 @@ step "kube-init" {
     "kubecost",
   ]
 
-  sha     = ""
+  sha     = "7686a7c43b798ed174a08fd6df8a42e9b4634a738fe9adf3a935d198c1a7b616"
   retries = 0
 }
 
@@ -53,6 +53,6 @@ step "helm" {
     "kubecost",
   ]
 
-  sha     = ""
+  sha     = "h1:+S8RC54c7NBUwXWrlxyGq/PvWrdYIVxDXyQRfTtPltM="
   retries = 0
 }
