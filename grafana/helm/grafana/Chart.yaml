@@ -1,0 +1,9 @@
+apiVersion: v2
+name: grafana
+description: A helm chart for grafana
+version: 0.1.0
+appVersion: 0.2.3
+dependencies:
+- name: grafana
+  version: 0.2.3
+  repository: cm://app.plural.sh/cm/grafana
